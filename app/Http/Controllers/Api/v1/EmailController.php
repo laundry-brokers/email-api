@@ -78,7 +78,7 @@ class EmailController extends Controller
         $email = $this->model->create($params);
 
         if($email) {
-            Mail::to('prueba@thelaundrystations.com')->send(new ContactFormMail($params));
+            Mail::to('prueba@thelaundrystations.com', 'otro@thelaundrystations.com')->send(new ContactFormMail($params));
 
             return response()->json([
                 'status' => true,

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65e85f9f959c0b087110331754d451cf",
+    "content-hash": "e543943c119b8c3a137223ec1fdce1a1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,59 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.2.0"
             },
             "time": "2023-11-14T13:51:46+00:00"
+        },
+        {
+            "name": "automattic/woocommerce",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/wc-api-php.git",
+                "reference": "d3b292f04c0b3b21dced691ebad8be073a83b4ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/wc-api-php/zipball/d3b292f04c0b3b21dced691ebad8be073a83b4ad",
+                "reference": "d3b292f04c0b3b21dced691ebad8be073a83b4ad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">= 7.1.0"
+            },
+            "require-dev": {
+                "overtrue/phplint": "7.4.x-dev",
+                "phpunit/phpunit": "^8",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Automattic\\WooCommerce\\": [
+                        "src/WooCommerce"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Claudio Sanches",
+                    "email": "claudio.sanches@automattic.com"
+                }
+            ],
+            "description": "A PHP wrapper for the WooCommerce REST API",
+            "keywords": [
+                "api",
+                "woocommerce"
+            ],
+            "support": {
+                "issues": "https://github.com/woocommerce/wc-api-php/issues",
+                "source": "https://github.com/woocommerce/wc-api-php/tree/3.1.0"
+            },
+            "time": "2022-03-18T21:46:17+00:00"
         },
         {
             "name": "brick/math",
@@ -185,6 +238,93 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "codexshaper/laravel-woocommerce",
+            "version": "v3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codexshaper/laravel-woocommerce.git",
+                "reference": "4b8865d937699ed386818f2188e23ee9926c8100"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codexshaper/laravel-woocommerce/zipball/4b8865d937699ed386818f2188e23ee9926c8100",
+                "reference": "4b8865d937699ed386818f2188e23ee9926c8100",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/woocommerce": "^3.0"
+            },
+            "require-dev": {
+                "illuminate/support": "~5.5.40|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Codexshaper\\WooCommerce\\WooCommerceServiceProvider"
+                    ],
+                    "aliases": {
+                        "Attribute": "Codexshaper\\WooCommerce\\Models\\Attribute",
+                        "Category": "Codexshaper\\WooCommerce\\Models\\Category",
+                        "Coupon": "Codexshaper\\WooCommerce\\Models\\Coupon",
+                        "Customer": "Codexshaper\\WooCommerce\\Models\\Customer",
+                        "Note": "Codexshaper\\WooCommerce\\Models\\Note",
+                        "Order": "Codexshaper\\WooCommerce\\Models\\Order",
+                        "PaymentGateway": "Codexshaper\\WooCommerce\\Facades\\PaymentGateway",
+                        "Product": "Codexshaper\\WooCommerce\\Models\\Product",
+                        "Refund": "Codexshaper\\WooCommerce\\Models\\Refund",
+                        "Report": "Codexshaper\\WooCommerce\\Models\\Report",
+                        "Review": "Codexshaper\\WooCommerce\\Models\\Review",
+                        "Setting": "Codexshaper\\WooCommerce\\Models\\Setting",
+                        "ShippingMethod": "Codexshaper\\WooCommerce\\Models\\ShippingMethod",
+                        "ShippingZone": "Codexshaper\\WooCommerce\\Models\\ShippingZone",
+                        "ShippingZoneMethod": "Codexshaper\\WooCommerce\\Models\\ShippingZoneMethod",
+                        "System": "Codexshaper\\WooCommerce\\Models\\System",
+                        "Tag": "Codexshaper\\WooCommerce\\Models\\Tag",
+                        "Tax": "Codexshaper\\WooCommerce\\Models\\Tax",
+                        "TaxClass": "Codexshaper\\WooCommerce\\Models\\TaxClass",
+                        "Term": "Codexshaper\\WooCommerce\\Models\\Term",
+                        "Variation": "Codexshaper\\WooCommerce\\Models\\Variation",
+                        "Webhook": "Codexshaper\\WooCommerce\\Facades\\Webhook",
+                        "WooCommerce": "Codexshaper\\WooCommerce\\Facades\\WooCommerce",
+                        "WooAnalytics": "Codexshaper\\WooCommerce\\Facades\\WooAnalytics",
+                        "Query": "Codexshaper\\WooCommerce\\Facades\\Query"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codexshaper\\WooCommerce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Md Abu Ahsan Basir",
+                    "email": "maab.career@gmail.com"
+                }
+            ],
+            "description": "WooCommerce Rest API for Laravel",
+            "keywords": [
+                "laravel",
+                "laravel-woocommerce",
+                "laravel-woocommerce-api",
+                "laravel-woocommerce-rest-api",
+                "woocommerce",
+                "woocommerce-api",
+                "woocommerce-rest-api"
+            ],
+            "support": {
+                "issues": "https://github.com/Codexshaper/laravel-woocommerce/issues",
+                "source": "https://github.com/Codexshaper/laravel-woocommerce/tree/v3.0.4"
+            },
+            "time": "2024-03-05T11:43:18+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -7913,16 +8053,16 @@
         },
         {
             "name": "spatie/flare-client-php",
-            "version": "1.4.4",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "17082e780752d346c2db12ef5d6bee8e835e399c"
+                "reference": "9aa60f6ded35a774554e7a5256dca12b72693b78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/17082e780752d346c2db12ef5d6bee8e835e399c",
-                "reference": "17082e780752d346c2db12ef5d6bee8e835e399c",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/9aa60f6ded35a774554e7a5256dca12b72693b78",
+                "reference": "9aa60f6ded35a774554e7a5256dca12b72693b78",
                 "shasum": ""
             },
             "require": {
@@ -7970,7 +8110,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.4.4"
+                "source": "https://github.com/spatie/flare-client-php/tree/1.5.0"
             },
             "funding": [
                 {
@@ -7978,7 +8118,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-31T14:18:45+00:00"
+            "time": "2024-05-02T13:18:42+00:00"
         },
         {
             "name": "spatie/ignition",
